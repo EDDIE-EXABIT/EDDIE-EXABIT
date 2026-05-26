@@ -36,7 +36,7 @@
 <b>DE</b>: KDE Plasma 6
 <b>WM</b>: KWin (Wayland)
 <b>Terminal</b>: Konsole
-<b>IDE</b>: Visual Studio / Neovim
+<b>IDE</b>: Visual Studio 
 <b>CPU</b>: Brain Core (8) @ 4.20GHz
 <b>GPU</b>: RTX-Creative (Imagination)
 <b>Memory</b>: Coffee / Tea (Highly Cached)
