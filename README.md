@@ -20,8 +20,8 @@
 ⠀⠀⠀⠀⠀⠀⣤⣤⣽⡿⠿⢿⣷⣤⣸⣿⣶⣿⣿⣿⣿⣯⣤⡤⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⢠⣴⣚⣁⣿⣿⠿⣶⣤⣄⣈⣹⣿⣿⣿⣿⣿⣿⣿⣿⣉⣓⣤⡀⠀⠀⠀-->
 <!-- <img src="https://i.postimg.cc/7hkYg9zk/asci-contents.png" width="95%" alt="Terminal Art" />⠀⠀⠀-->
-
-  <img src="https://i.postimg.cc/8CNH0gVv/asci-content2.png" width="92%" alt="Terminal Art" />⠀
+  <img src="https://i.postimg.cc/W13WNPHx/asci-content3.png#gh-light-mode-only" width="92%" alt="Terminal Art" />⠀
+  <img src="https://i.postimg.cc/8CNH0gVv/asci-content2.png#gh-dark-mode-only" width="92%" alt="Terminal Art" />⠀
   
 </pre>
 </td>
