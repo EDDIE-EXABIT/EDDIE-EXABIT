@@ -33,7 +33,7 @@
       fill: var(--bg-color);
       stroke: var(--border-color);
       stroke-width: 1.5;
-      rx: 8px;
+
     }
 
     .terminal-header {
