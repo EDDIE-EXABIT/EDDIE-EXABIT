@@ -1,87 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100%" height="320">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        /* Base Styling */
-        .container {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          font-family: monospace;
-          color: #c9d1d9;
-          background: #0d1117;
-          border-radius: 6px;
-          padding: 20px;
-          box-sizing: border-box;
-          height: 100%;
-        }
-        .art-col {
-          width: 40%;
-          text-align: center;
-        }
-        .art-col img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 4px;
-        }
-        .specs-col {
-          width: 55%;
-        }
-        pre {
-          margin: 0;
-          font-size: 13px;
-          line-height: 1.4;
-        }
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="360" viewBox="0 0 800 360" fill="none">
+  <style>
+    /* Default / Light Theme */
+    :root {
+      --bg-color: #ffffff;
+      --border-color: #e1e4e8;
+      --text-main: #24292e;
+      --text-accent: #0366d6;
+      --text-muted: #586069;
+      --terminal-header: #f6f8fa;
+    }
 
-        /* Responsive Mobile Layout */
-        @media (max-width: 600px) {
-          .container {
-            flex-direction: column;
-            height: auto;
-            text-align: center;
-          }
-          .art-col, .specs-col {
-            width: 100%;
-          }
-          .art-col {
-            margin-bottom: 15px;
-          }
-          .art-col img {
-            max-width: 150px; /* Constrains it on small mobile screens */
-          }
-        }
-      </style>
+    /* Dark Theme Toggle */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #0d1117;
+        --border-color: #30363d;
+        --text-main: #c9d1d9;
+        --text-accent: #58a6ff;
+        --text-muted: #8b949e;
+        --terminal-header: #161b22;
+      }
+      .ascii-light { display: none !important; }
+      .ascii-dark { display: block !important; }
+    }
 
-      <div class="container">
-        <!-- Left Side: Image -->
-        <div class="art-col">
-          <!-- Note: The image must be hosted via a secure URL (https) -->
-          <img src="https://i.postimg.cc/8CNH0gVv/asci-content2.png" alt="Terminal Art" />
-        </div>
+    @media (prefers-color-scheme: light) {
+      .ascii-light { display: block !important; }
+      .ascii-dark { display: none !important; }
+    }
+
+    .card {
+      fill: var(--bg-color);
+      stroke: var(--border-color);
+      stroke-width: 1.5;
+      rx: 8px;
+    }
+
+    .terminal-header {
+      fill: var(--terminal-header);
+      stroke: var(--border-color);
+      stroke-width: 1.5;
+    }
+
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+      font-size: 13px;
+    }
+
+    .title {
+      font-weight: bold;
+      fill: var(--text-accent);
+    }
+
+    .label {
+      font-weight: bold;
+      fill: var(--text-accent);
+    }
+
+    .value {
+      fill: var(--text-main);
+    }
+
+    .divider {
+      stroke: var(--border-color);
+      stroke-width: 1;
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect class="card" x="1" y="1" width="798" height="358" />
+
+  <!-- Terminal Style Header -->
+  <path class="terminal-header" d="M 1,9 Q 1,1 9,1 L 791,1 Q 799,1 799,9 L 799,35 L 1,35 Z" />
+  
+  <!-- Window Controls (Mac/Linux Terminal vibe) -->
+  <circle cx="20" cy="18" r="6" fill="#ff5f56" />
+  <circle cx="40" cy="18" r="6" fill="#ffbd2e" />
+  <circle cx="60" cy="18" r="6" fill="#27c93f" />
+  
+  <!-- Terminal Title -->
+  <text x="400" y="22" text-anchor="middle" class="font-mono" fill="var(--text-muted)" font-size="12">fastfetch — profile</text>
+
+  <!-- Left Column (40%): ASCII Art / Custom Drawing -->
+  <g transform="translate(30, 60)">
+
+    <image href="./ascii_content_drawning.png" class="ascii-dark" x="0" y="10" width="280" height="260" />
+    <image href="./ascii_content_drawning_inverted.png" class="ascii-light" x="0" y="10" width="280" height="260" />
 
 
-        <div class="specs-col">
-<pre>
-<b>Eddie-Exabit@github-profile</b>
----------------------------
-<b>OS</b>: Linux (Developer Edition)
-<b>Host</b>: Portfolio-PC v2.0
-<b>Kernel</b>: Git Commit 2.45.0
-<b>Uptime</b>: 3 years (Since joining GitHub)
-<b>Shell</b>: zsh 5.9 (konsole)
-<b>DE</b>: KDE Plasma 6
-<b>WM</b>: KWin (Wayland)
-<b>Terminal</b>: Konsole
-<b>IDE</b>: VS Code / Neovim
-<b>CPU</b>: Brain Core (8) @ 4.20GHz
-<b>GPU</b>: RTX-Creative (Imagination)
-<b>Memory</b>: Coffee / Tea (Highly Cached)
+  </g>
 
-🟥 🟧 🟨 🟩 🟦 🟪 ⬛ ⬜
-</pre>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+  <!-- Vertical Divider -->
+  <line x1="340" y1="55" x2="340" y2="335" class="divider" />
+
+  <!-- Right Column (60%): Fastfetch Specs -->
+  <g transform="translate(370, 75)" class="font-mono">
+    <!-- Header -->
+    <text x="0" y="0" class="title" font-size="15">Eddie-Exabit@github-profile</text>
+    <line x1="0" y1="10" x2="390" y2="10" class="divider" />
+
+    <!-- Specs List -->
+    <g transform="translate(0, 32)">
+      <text x="0" y="0"><tspan class="label">OS</tspan>: <tspan class="value">Linux (Developer Edition)</tspan></text>
+      <text x="0" y="18"><tspan class="label">Host</tspan>: <tspan class="value">Portfolio-PC v2.0</tspan></text>
+      <text x="0" y="36"><tspan class="label">Kernel</tspan>: <tspan class="value">Git Commit 2.45.0</tspan></text>
+      <text x="0" y="54"><tspan class="label">Uptime</tspan>: <tspan class="value">5 years (Since joining GitHub)</tspan></text>
+      <text x="0" y="72"><tspan class="label">Shell</tspan>: <tspan class="value">zsh 5.9 (konsole)</tspan></text>
+      <text x="0" y="90"><tspan class="label">DE</tspan>: <tspan class="value">KDE Plasma 6</tspan></text>
+      <text x="0" y="108"><tspan class="label">WM</tspan>: <tspan class="value">KWin (Wayland)</tspan></text>
+      <text x="0" y="126"><tspan class="label">Terminal</tspan>: <tspan class="value">Konsole</tspan></text>
+      <text x="0" y="144"><tspan class="label">IDE</tspan>: <tspan class="value">Visual Studio</tspan></text>
+      <text x="0" y="162"><tspan class="label">CPU</tspan>: <tspan class="value">Brain Core (8) @ 4.20GHz</tspan></text>
+      <text x="0" y="180"><tspan class="label">GPU</tspan>: <tspan class="value">RTX-Creative (Imagination)</tspan></text>
+      <text x="0" y="198"><tspan class="label">Memory</tspan>: <tspan class="value">Coffee / Tea (Highly Cached)</tspan></text>
+      
+      <!-- Color Blocks -->
+      <text x="0" y="230" font-size="15">🟥 🟧 🟨 🟩 🟦 🟪 ⬛ ⬜</text>
+    </g>
+  </g>
 </svg>
