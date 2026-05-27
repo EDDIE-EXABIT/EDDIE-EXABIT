@@ -54,7 +54,7 @@
 
     .label {
       font-weight: bold;
-      fill: var(--text-accent);
+      fill: var(--text-main);
     }
 
     .value {
