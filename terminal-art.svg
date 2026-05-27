@@ -84,7 +84,7 @@
   <!-- Left Column (40%): ASCII Art / Custom Drawing -->
   <g transform="translate(30, 60)">
 
-    <image href="https://github.com/EDDIE-EXABIT/EDDIE-EXABIT/blob/main/ascii_content_drawning.png" class="ascii-dark" x="0" y="10" width="280" height="260" />
+    <image href="https://raw.githubusercontent.com/EDDIE-EXABIT/EDDIE-EXABIT/refs/heads/main/ascii_content_drawning.png" class="ascii-dark" x="0" y="10" width="280" height="260" />
     <image href="./ascii_content_drawning_inverted.png" class="ascii-light" x="0" y="10" width="280" height="260" />
 
 
