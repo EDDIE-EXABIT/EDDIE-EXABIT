@@ -71,7 +71,7 @@
   <rect class="card" x="1" y="1" width="798" height="358" />
 
   <!-- Terminal Style Header -->
-  <path class="terminal-header" d="M 1,9 Q 1,1 9,1 L 791,1 Q 799,1 799,9 L 799,35 L 1,35 Z" />
+  <!--<path class="terminal-header" d="M 1,9 Q 1,1 9,1 L 791,1 Q 799,1 799,9 L 799,35 L 1,35 Z" />-->
   
   <!-- Window Controls (Mac/Linux Terminal vibe) -->
   <circle cx="20" cy="18" r="6" fill="#ff5f56" />
